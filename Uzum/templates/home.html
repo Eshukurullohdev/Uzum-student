@@ -1,0 +1,853 @@
+{% extends 'base.html' %} {% block content %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<body class="bg-white     overflow-x-hidden">
+    <div class="flex gap-[20px] items-center">
+        {% for mahsulotlar in mahsulotlar %}
+        <a href="{% url 'detail' mahsulotlar.id %}">
+            <h1>{{ mahsulotlar.name }}</h1>
+            <h1>{{ mahsulotlar.description }}</h1>
+            <h1>{{ mahsulotlar.price }}</h1>
+        </a>
+            {% endfor %}
+        </div>
+    <div class="max-w-[1280px] w-full mx-auto px-3 sm:px-4 md:px-5 mt-4 hidden md:flex">
+
+        <div class="swiper bannerSwiper rounded-3xl overflow-hidden relative">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide">
+                    <img src="https://images.uzum.uz/d8f00g3sv8vo2t0isrm0/main_page_banner.jpg" class="w-full h-[180px]  md:h-[350px] lg:h-[413px] object-cover" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://images.uzum.uz/d8abkursv8vo2t0hfs1g/main_page_banner.jpg" class="w-full h-[180px]  md:h-[350px] lg:h-[413px] object-cover" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="https://images.uzum.uz/d8joe0a1146tv07688tg/main_page_banner.jpg" class="w-full h-[180px]  md:h-[350px] lg:h-[413px] object-cover" alt="">
+                </div>
+
+            </div>
+
+            <div class="swiper-button-next hidden  text-white"></div>
+            <div class="swiper-button-prev hidden  text-white"></div>
+
+            <div class="swiper-pagination"></div>
+
+        </div>
+
+    </div>
+
+    <div class="md:flex md:items-center mx-auto md:justify-between hidden md:flex md:pl-[3px] pl-[40px] md:w-full md:max-w-[1280px] mt-[15px]">
+
+        <div class="bolalar md:w-[301px] h-[60px] bg-[#efefef] w-[301px] ml-[30px] rounded-[17px] md:ml-[20px] md:m-[1px] m-[20px] flex items-center hover:bg-[grey]">
+            <img class="w-[40px] h-[40px] ml-[25px] rounded-[10px]" src="https://static.uzum.uz/static/promo_images/756b6f56-9d2d-414c-a9d3-37d40d1c808b" alt="">
+            <h1 class="ml-[10px]"> Onalar va beolalar uchun</h1>
+
+        </div>
+
+
+        <div class="bolalar w-[301px] h-[60px] bg-[#efefef] ml-[30px] rounded-[17px] md:ml-[20px] md:m-[1px] m-[20px] flex items-center hover:bg-[grey]">
+            <img class="w-[40px] h-[40px] ml-[90px] rounded-[10px]" src="https://static.uzum.uz/static/promo_images/67a3f24c-26d4-4fbb-adcf-ef3181707132" alt="">
+            <h1 class=" p-[10px]"> Futbol </h1>
+
+        </div>
+
+
+        <div class="bolalar w-[301px] h-[60px] bg-[#efefef] ml-[30px] rounded-[17px] md:ml-[20px] md:m-[1px] m-[20px] flex items-center hover:bg-[grey]">
+            <img class="w-[40px] h-[40px] ml-[55px] rounded-[10px]" src="https://static.uzum.uz/static/promo_images/4f28d325-14b1-4ad4-b839-eb4509492cdd" alt="">
+            <h1 class="p-[10px]"> Zamonaviy bozor </h1>
+
+        </div>
+
+
+        <div class="bolalar w-[301px] h-[60px] bg-[#efefef] ml-[30px] rounded-[17px] md:ml-[20px] md:m-[1px] m-[20px] flex items-center hover:bg-[grey]">
+            <img class="w-[40px] h-[40px] ml-[55px] rounded-[10px]" src="https://static.uzum.uz/static/promo_images/569c1638-40fb-4c12-aa05-726b0cf92f2e" alt="">
+            <h1 class="p-[10px]"> Yozgi chegirmalar </h1>
+
+        </div>
+
+    </div>
+
+    </div>
+    <section class="pb-[100px] flex flex-col gap-y-[10px]">
+
+        <h1 class=" mx-auto md:w-[1310px] text-[25px]  w-[430px] mt-[10px] pl-[40px] font-bold mb-[-2px]">Mashhur
+            <i class="fa-solid fa-angle-right"></i>
+        </h1>
+
+        <div class="md:mx-auto md:w-[1300px] w-[430px]  justify-content align-items md:pl-[70px] pl-[25px] ">
+            {% load static %}
+            <div class="md:flex ">
+
+
+
+
+
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-40px] m-[20px] ml-[25px]  relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-7px] m-[20px] ml-[25px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] mr-[-50px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[65px] m-[20px] ml-[25px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+            <div class="md:flex ">
+
+
+
+
+
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-40px] m-[25px]  relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-7px] m-[20px] ml-[25px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] mr-[-50px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative md:top-[0px] top-[-1375px] md:left-[0px] left-[195px] flex">
+
+                    <div class="md:ml-[65px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="max-w-[1250px] h-[500px] w-full mx-auto  my-[20px] hidden md:pl-[50px]  pl-[35px] " id="div">
+
+
+
+            <div class="md:flex ">
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-40px] m-[20px]  relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[-7px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:ml-[-7px] m-[20px] mr-[-50px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class="bg-white mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/cupefjs5j42bjc4eq1rg/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px] w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">544 260
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">579 000</h2>
+                                <h2 class="md:text-[11px] pl-[5px] text-[9px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    41 012 so'm/oyiga
+                                </h2>
+                                <h2 class="text-[11px] md:w-[170px] w-[125px]">O'g'il bolalar uchun krossovkalar Аdidas GV7946
+                                </h2>
+                                <h2 class="text-[11px] flex uppercase   "><img src="https://uzum.uz/static/img/badges/latest-product-badge-icon.svg" alt=""> Yangilik
+                                </h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative  flex">
+
+                    <div class="md:ml-[65px] m-[20px] ml-[10px] relative  flex">
+                        <div class="relative">
+                            <i class="fa-regular fa-heart absolute md:top-[5px] md:left-[200px] left-[120px] w-[24px] h-[24px] p-[5px] z-[2] bg-gray-300 rounded-full"></i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[286px] md:left-[10px] left-[5px] top-[185px] w-[86px] font-bold text-[10px] h-[16px] flex pl-[4px] z-[2] bg-[#81FFE2] rounded-full">
+                                Bozordan arzon
+                            </i>
+                        </div>
+                        <div class="relative ">
+
+                            <i class="absolute md:top-[307px] md:left-[10px] font-bold left-[5px] top-[205px] w-[102px] text-[8px] h-[16px] flex p-[1px] z-[2]  bg-[#FF4499] rounded-full">
+                                ARZON NARX KAFOLATI2
+                            </i>
+                        </div>
+                        <div class=" mx-auto justify-content  align-items md:h-[520px] h-[415px]">
+                            <div class="oka md:pl-[5px] pr-[-155px]">
+                                <img src="https://images.uzum.uz/ct6p7hui4n3ehka1pph0/t_product_540_high.jpg" alt="" class="md:w-[232px] md:h-[325px]  w-[150px] h-[225px] rounded-[12px] ">
+                                <div class="relative">
+                                    <img class="w-[45px] absolute top-[-210px] md:top-[-310px] left-[-6px]" src="https://static.uzum.uz/static/product_badge/6f469e5d-5e6c-4b16-b8e6-7b8135956bbe" alt="" class="absolute top-0 left-0 w-[100px] h-[100px]">
+                                </div>
+                                <div class="flex">
+                                    <h2 class="text-[#8B56F5] ">25 650
+                                    </h2><img class="md:w-[18px] md:ml-[5px] ml-[3px] md:m-[4px] m-[4px] w-[18px] h-[15px]" src="https://img.icons8.com/color/48/bank-card-back-side.png" alt="bank-card-back-side" />
+                                </div>
+                                <h2 class="text-[#ccc]">27 000</h2>
+                                <h2 class="md:text-[11px] text-[9px] pl-[5px] bg-[#FFFF00] text-black md:w-[101px] w-[80px] md:h-[18px] h-[15px]  rounded-[5px]">
+                                    1 912 so'm/oyiga
+                                </h2>
+                                <h2 class="md:text-[13px] text-[11px] text-[#7F4DFF] md:w-[101px] w-[80px] md:h-[18px] h-[15px] rounded-[5px]">
+                                    Arzonlashdi</h2>
+                                <h2 class="text-[11px] md:w-[150px] w-[125px]">Dvigatel tozalovchi Axma Avtoproseries, 500 g</h2>
+                                <h2 class="text-[11px]">⭐4.8 (500 sharhlar)</h2>
+                                <button class="bg-[#8B56F5] md:absolute md:bottom-[20px] absolute bottom-[10px] flex text-white md:w-[222px] w-[135px] pt-[5px] h-[35px] md:pl-[60px] pl-[35px] pr-[20px] rounded-[5px]">
+                                    <img class="md:p-[5px] md:mt-[-4px] md:pr-[px] md:w-[30px] pb-[7px] pr-[2px] w-[23px] p-[3px]"
+                                        src="https://img.icons8.com/material-outlined/24/FFFFFF/shopping-basket-add.png"
+                                        alt="shopping-basket-add" /> Ertaga</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+    </section>
+    <div class="md:w-[500px] w-[300px] mx-auto ">
+        <button class="md:w-[500px] md:h-[50px] md:mt-[10px] bg-[#ddd] rounded-[15px] mt-[-100px] w-[300px] h-[30px]" id="yana">Yana ko'rsatish</button>
+    </div>
+    <a href="http://127.0.0.1:8000/" class="bg-[#7f4dff] p-[15px] rounded-[50%] text-[#fff] fixed bottom-[20px] right-[20px]"><i
+            class="fa-solid fa-chevron-up"></i></a>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        let btn = document.getElementById("yana")
+        let div = document.getElementById("div")
+        btn.addEventListener("click", () => {
+            div.style.display = 'block'
+        })
+        new Swiper(".bannerSwiper", {
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+        new Swiper(".categorySwiper", {
+            spaceBetween: 12,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1.2,
+                },
+                480: {
+                    slidesPerView: 1.8,
+                },
+                640: {
+                    slidesPerView: 2.3,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 4,
+                }
+            }
+        });
+    </script>
+
+</body>
+{% endblock %}
